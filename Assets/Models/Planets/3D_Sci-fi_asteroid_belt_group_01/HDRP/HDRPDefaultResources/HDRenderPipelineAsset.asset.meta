@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 677fd495f156dd84d9570178d828e6db
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 263841
+  packageName: 3D Asteroid Pack
+  packageVersion: 1.0
+  assetPath: Assets/3D_Sci-fi_asteroid_belt_group_01/HDRP/HDRPDefaultResources/HDRenderPipelineAsset.asset
+  uploadId: 681849

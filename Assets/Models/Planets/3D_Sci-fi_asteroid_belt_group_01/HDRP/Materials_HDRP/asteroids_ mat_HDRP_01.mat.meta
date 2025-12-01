@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 10c5cbcf9b680364e9480dc15932c959
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 263841
+  packageName: 3D Asteroid Pack
+  packageVersion: 1.0
+  assetPath: Assets/3D_Sci-fi_asteroid_belt_group_01/HDRP/Materials_HDRP/asteroids_
+    mat_HDRP_01.mat
+  uploadId: 681849

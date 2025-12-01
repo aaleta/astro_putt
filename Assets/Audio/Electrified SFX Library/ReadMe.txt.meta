@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 16f3c7bbc30a2dc428ece8c60af5be1b
+labels:
+- Electrical
+- electricity
+- shock
+- blast
+- sfx
+- library
+- electrified
+- testla
+- spark
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 2823
+  packageName: Electrified SFX Library
+  packageVersion: 1.1
+  assetPath: Assets/Electrified SFX Library/ReadMe.txt
+  uploadId: 763042

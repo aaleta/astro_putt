@@ -1,0 +1,345 @@
+{
+    "m_SelectedDeviceId": "1WMHHA675C2384",
+    "m_SelectedProcess": {
+        "deviceId": "1WMHHA675C2384",
+        "name": "com.aaleta.AstroPutt",
+        "processId": 16040,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownProcessesForSerialization": [
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.Unity.AstroPutt",
+            "processId": 10354,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.Unity.AstroPutt",
+            "processId": 14586,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.Unity.AstroPutt",
+            "processId": 16194,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 18739,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 19500,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 20868,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 6823,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 7565,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 9087,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 11985,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 13833,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 15122,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 17167,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 30996,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 32534,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 3526,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 6193,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 7607,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 9976,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 11390,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 11720,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 14129,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 15710,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 18134,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 19162,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 21143,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 23860,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 25831,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 26925,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 28980,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 31345,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 2105,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 4900,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 6232,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 8283,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 9576,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 11039,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 12183,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 12732,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 16040,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_ExtraWindowState": {
+        "Type": 0,
+        "Height": 0.0
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "AutoCapture": true
+    },
+    "m_FilterOptions": {
+        "m_Filter": "",
+        "m_UseRegularExpressions": false,
+        "m_MatchCase": false
+    },
+    "m_SymbolPaths": [],
+    "m_CaptureVideoSettings": {
+        "TimeLimitEnabled": false,
+        "TimeLimit": 180,
+        "VideoSizeEnabled": false,
+        "VideoSizeX": 1280,
+        "VideoSizeY": 720,
+        "BitRateEnabled": false,
+        "BitRateK": 20000,
+        "DisplayIdEnabled": false,
+        "DisplayId": ""
+    },
+    "m_ScreenCaptureSettings": {
+        "Mode": 0,
+        "m_LastSaveLocation": [
+            "C:\\Users\\Aleta\\Desktop\\unity\\Astro Putt",
+            "C:\\Users\\Aleta\\Desktop\\unity\\Astro Putt"
+        ]
+    },
+    "m_QueryLayoutSettings": {
+        "LastLayoutSaveLocation": "",
+        "LastScreenshotSaveLocation": ""
+    },
+    "m_InputSettings": {
+        "ShiftModifier": false,
+        "SendText": "",
+        "PosixKillSignal": 0,
+        "TargetProcess": {
+            "deviceId": "",
+            "name": "",
+            "processId": 0,
+            "exited": false
+        }
+    },
+    "m_AutoScroll": 2
+}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6e2743eede003446aadcb189e9354b59
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 287099
+  packageName: Cartoon Low-Poly Spaceship
+  packageVersion: 1.0.0
+  assetPath: Assets/FlexUnit/CartoonSpaceship/URP/Materials/GreenBody.mat
+  uploadId: 669897
