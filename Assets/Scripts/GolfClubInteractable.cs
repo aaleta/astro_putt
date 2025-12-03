@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class GolfClubFinal : XRGrabInteractable
 {
@@ -14,9 +16,17 @@ public class GolfClubFinal : XRGrabInteractable
     [Tooltip("Which LOCAL axis is the shaft? (Red=Right, Green=Up, Blue=Forward)")]
     [SerializeField] private Vector3 localShaftAxis = Vector3.up; // Change to Vector3.forward if Z-aligned
 
+    [Header("Haptics")]
+    [Tooltip("How fast (m/s) must you swing to get max vibration?")]
+    public float maxHitVelocity = 15f;
+    public float vibrationDuration = 0.1f;
+
     // Smoothing Cache
     private Vector3 _smoothedDirection;
     private bool _hasInitializedTwoHand = false;
+
+    // Cooldown to prevent "buzzing" if physics jitters
+    private float lastHapticTime;
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
@@ -65,16 +75,9 @@ public class GolfClubFinal : XRGrabInteractable
         }
 
         // 3. Calculate Rotation
-        // Start with the Primary Hand's rotation (This keeps your wrist "twist" active for opening the club face)
         Quaternion baseRotation = interactorsSelecting[0].transform.rotation;
-
-        // Calculate where the shaft is CURRENTLY pointing based on just that one hand
         Vector3 currentShaftVector = baseRotation * localShaftAxis;
-
-        // Calculate the rotation needed to bend the shaft from "Current" to "Target"
         Quaternion alignmentRotation = Quaternion.FromToRotation(currentShaftVector, _smoothedDirection);
-
-        // Apply that correction to the base rotation
         Quaternion finalRotation = alignmentRotation * baseRotation;
 
         // 4. Apply Physics
@@ -99,6 +102,35 @@ public class GolfClubFinal : XRGrabInteractable
             // Draw the Target Vector (RED line)
             Gizmos.color = Color.red;
             Gizmos.DrawLine(hand1.position, interactorsSelecting[1].transform.position);
+        }
+    }
+
+    // Haptics
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            Debug.Log("Golf Club hit the ball!");
+            if (Time.time < lastHapticTime + 0.1f) return;
+            lastHapticTime = Time.time;
+
+            float impactSpeed = collision.relativeVelocity.magnitude;
+            float intensity = Mathf.Clamp01(impactSpeed / maxHitVelocity);
+            intensity = Mathf.Max(intensity, 0.1f);
+
+            foreach (var interactor in interactorsSelecting)
+            {
+                Debug.Log($"Triggering haptic on interactor {interactor.transform.gameObject.name} with intensity {intensity}");
+                TriggerHaptic(interactor, intensity);
+            }
+        }
+    }
+
+    private void TriggerHaptic(IXRSelectInteractor interactor, float intensity)
+    {
+        if (interactor is XRBaseInputInteractor inputInteractor)
+        {
+            inputInteractor.SendHapticImpulse(intensity, vibrationDuration);
         }
     }
 }
