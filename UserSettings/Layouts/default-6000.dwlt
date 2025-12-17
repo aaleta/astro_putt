@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Animation
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 306}
   m_MaxSize: {x: 10000, y: 10000}
@@ -39,16 +39,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1469
+    x: 1462
     y: 0
-    width: 451
+    width: 458
     height: 933
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 16}
   m_Panes:
+  - {fileID: 16}
   - {fileID: 14}
-  - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &3
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 132
+  controlID: 95
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -167,12 +167,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1469
+    width: 1462
     height: 933
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 71
+  controlID: 54
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -193,12 +193,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1469
-    height: 560
+    width: 1462
+    height: 615
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 72
+  controlID: 55
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -217,13 +217,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 332
-    height: 560
+    width: 431
+    height: 615
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 16}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &10
@@ -241,18 +241,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 332
+    x: 431
     y: 0
-    width: 1137
-    height: 560
+    width: 1031
+    height: 615
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 19}
   - {fileID: 13}
+  - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -263,24 +264,136 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: AnimationWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 560
-    width: 1469
-    height: 373
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 15}
+    y: 615
+    width: 1462
+    height: 318
+  m_MinSize: {x: 51, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 17}
+  - {fileID: 20}
+  - {fileID: 12}
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.AnimationWindow
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: -8166618308981325432, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Animation\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 639
+    width: 1461
+    height: 292
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: -188582
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEditor.Graphs.dll::UnityEditor.Graphs.AnimatorControllerTool
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Animator\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 2351
+    y: 79
+    width: 675
+    height: 589
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: 6311291053801899301, guid: 52102d82f020b5f46b10b0c879589257, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.7894737
+      e01: 0
+      e02: 0
+      e03: -95.47371
+      e10: 0
+      e11: 0.7894737
+      e12: 0
+      e13: 214.94736
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 52102d82f020b5f46b10b0c879589257, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 6311291053801899301, guid: 52102d82f020b5f46b10b0c879589257, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 0
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,10 +414,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Git for Unity\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 3102
+    x: 1469
     y: 79
-    width: 737
-    height: 907
+    width: 450
+    height: 1027
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -316,16 +429,16 @@ MonoBehaviour:
     m_SaveData: []
     m_ContainerData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 8945.2359177
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 0
+  currentTrackingStatusHasUpdate: 1
   currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
-  changeTab: 5
-  activeTab: 5
+  changeTab: 3
+  activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 1
     isUserDataPresent: 1
@@ -462,20 +575,96 @@ MonoBehaviour:
       tracking: 
     remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: master
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys: []
-        values: []
+        keys:
+        - 00000000000000004000000000000000
+        values:
+        - path: ProjectSettings\ProjectSettings.asset
+          label: ProjectSettings.asset
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: ProjectSettings\ProjectSettings.asset
+            fullPath: C:\Users\Aleta\Desktop\unity\Astro Putt\ProjectSettings\ProjectSettings.asset
+            projectPath: ProjectSettings\ProjectSettings.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
       folders:
-        keys: []
-        values: []
+        keys:
+        - ProjectSettings
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: ProjectSettings
+          label: ProjectSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -504,6 +693,114 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: ProjectSettings
+        label: ProjectSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        label: ProjectSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\Aleta\Desktop\unity\Astro Putt\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\AndroidLogcatSettings.asset
+        label: AndroidLogcatSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\AndroidLogcatSettings.asset
+          fullPath: C:\Users\Aleta\Desktop\unity\Astro Putt\UserSettings\AndroidLogcatSettings.asset
+          projectPath: UserSettings\AndroidLogcatSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-6000.dwlt
+        label: default-6000.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-6000.dwlt
+          fullPath: C:\Users\Aleta\Desktop\unity\Astro Putt\UserSettings\Layouts\default-6000.dwlt
+          projectPath: UserSettings\Layouts\default-6000.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -523,13 +820,31 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries: []
-    changedFilesText: No changed files
+    gitStatusEntries:
+    - path: ProjectSettings\ProjectSettings.asset
+      fullPath: C:\Users\Aleta\Desktop\unity\Astro Putt\ProjectSettings\ProjectSettings.asset
+      projectPath: ProjectSettings\ProjectSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\AndroidLogcatSettings.asset
+      fullPath: C:\Users\Aleta\Desktop\unity\Astro Putt\UserSettings\AndroidLogcatSettings.asset
+      projectPath: UserSettings\AndroidLogcatSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\default-6000.dwlt
+      fullPath: C:\Users\Aleta\Desktop\unity\Astro Putt\UserSettings\Layouts\default-6000.dwlt
+      projectPath: UserSettings\Layouts\default-6000.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 3 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2025-12-01T01:42:18.860+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2025-12-01T01:42:26.891+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -27736,7 +28051,7 @@ MonoBehaviour:
       installSettingsHidden: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2025-12-03T01:00:49.697+01:00
       cacheType: 1
     newRepositoryRemoteUrl: https://github.com/aaleta/astro_putt.git
     repositoryRemoteName: origin
@@ -27822,13 +28137,13 @@ MonoBehaviour:
     m_Tooltip: Url of the origin remote
     m_TextWithWhitespace: "https://github.com/aaleta/astro_putt.git\u200B"
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2025-12-01T01:51:17.957+01:00
+    updatedTimeString: 2025-12-03T10:34:17.861+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2025-12-01T01:57:10.820+01:00
+    updatedTimeString: 2025-12-03T10:34:29.138+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2025-12-01T01:59:20.824+01:00
+    updatedTimeString: 2025-12-03T10:34:29.120+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -27850,12 +28165,12 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: 
     m_TextWithWhitespace: "Fetch\u200B"
-  repositoryProgressValue: 0.98630136
+  repositoryProgressValue: 0
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
---- !u!114 &13
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27876,10 +28191,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 2252
+    x: 2351
     y: 79
-    width: 1135
-    height: 534
+    width: 1029
+    height: 589
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -27897,7 +28212,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1135, y: 513}
+  m_TargetSize: {x: 1029, y: 568}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -27912,10 +28227,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -567.5
-    m_HBaseRangeMax: 567.5
-    m_VBaseRangeMin: -256.5
-    m_VBaseRangeMax: 256.5
+    m_HBaseRangeMin: -514.5
+    m_HBaseRangeMax: 514.5
+    m_VBaseRangeMin: -284
+    m_VBaseRangeMax: 284
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -27933,30 +28248,30 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1135
-      height: 513
+      width: 1029
+      height: 568
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 567.5, y: 256.5}
+    m_Translation: {x: 514.5, y: 284}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -567.5
-      y: -256.5
-      width: 1135
-      height: 513
+      x: -514.5
+      y: -284
+      width: 1029
+      height: 568
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1135, y: 534}
+  m_LastWindowPixelSize: {x: 1029, y: 589}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
   m_showToolbar: 1
---- !u!114 &14
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27977,9 +28292,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1470
+    x: 1463
     y: 24
-    width: 450
+    width: 457
     height: 907
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -27995,7 +28310,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 323
+    m_CachedPref: -323
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -28005,7 +28320,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &15
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28026,10 +28341,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 584
-    width: 1468
-    height: 347
+    x: 1920
+    y: 694
+    width: 1461
+    height: 292
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -28052,7 +28367,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/UI
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -28062,16 +28377,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Aleta\Desktop\unity\Astro Putt
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 77}
-    m_SelectedIDs: 2edf0000
-    m_LastClickedID: 57134
-    m_ExpandedIDs: 00000000e4cb0000e6cb0000e8cb0000eacb0000eccb0000eecb0000f0cb0000f2cb0000f4cb0000f6cb0000f8cb0000facb0000fccb0000fecb000000cc000002cc000004cc000006cc000008cc00000acc00000ccc00000ecc000010cc000012cc000014cc0000
+    scrollPos: {x: 0, y: 140}
+    m_SelectedIDs: c8060100
+    m_LastClickedID: 67272
+    m_ExpandedIDs: 00000000bece0000c0ce0000c2ce0000c4ce0000c6ce0000c8ce0000cace0000ccce0000cece0000d0ce0000d2ce0000d4ce0000d6ce0000d8ce0000dace0000dcce0000dece0000e0ce0000e2ce0000e4ce0000e6ce0000e8ce0000eace0000ecce0000eece0000f0ce0000f2ce0000f4ce0000f6ce0000f8ce0000face0000fcce0000fece000000cf000002cf000004cf000006cf000008cf00000acf00000ccf00000ecf000010cf000012cf000014cf000016cf000018cf00001acf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -28100,7 +28415,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e4cb0000e6cb0000e8cb0000eacb0000eccb0000eecb0000f0cb0000f2cb0000f4cb0000f6cb0000f8cb0000facb0000fccb0000fecb000000cc000002cc000004cc000006cc000008cc00000acc00000ccc00000ecc000010cc000012cc000014cc0000
+    m_ExpandedIDs: 00000000bece0000c0ce0000c2ce0000c4ce0000c6ce0000c8ce0000cace0000ccce0000cece0000d0ce0000d2ce0000d4ce0000d6ce0000d8ce0000dace0000dcce0000dece0000e0ce0000e2ce0000e4ce0000e6ce0000e8ce0000eace0000ecce0000eece0000f0ce0000f2ce0000f4ce0000f6ce0000f8ce0000face0000fcce0000fece000000cf000002cf000004cf000006cf000008cf00000acf00000ccf00000ecf000010cf000012cf000014cf000016cf000018cf00001acf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -28126,10 +28441,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 521ffdff
+    m_LastClickedInstanceID: -188590
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000030ae000030e500005caf0000
+    m_ExpandedInstanceIDs: c623000030ae000030e500005caf0000969e0200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -28158,7 +28473,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 341
---- !u!114 &16
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28181,8 +28496,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 24
-    width: 331
-    height: 534
+    width: 430
+    height: 589
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -28199,7 +28514,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d6faffff48db000008dc0000fcdc0000
+      m_ExpandedIDs: 0cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -28224,7 +28539,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &17
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28245,10 +28560,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 333
+    x: 432
     y: 24
-    width: 1135
-    height: 534
+    width: 1029
+    height: 589
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -28635,9 +28950,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.0045733, y: 0.83698297, z: 0.28291154}
+    m_Target: {x: -7.64931, y: 1.384692, z: 0.70484585}
     speed: 2
-    m_Value: {x: -1.0045733, y: 0.83698297, z: 0.28291154}
+    m_Value: {x: -7.64931, y: 1.384692, z: 0.70484585}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -28683,13 +28998,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.15328284, y: 0.8298603, z: -0.27675572, w: 0.4596197}
+    m_Target: {x: 0.2139925, y: 0.78532493, z: -0.39193913, w: 0.4288261}
     speed: 2
-    m_Value: {x: 0.15328285, y: 0.8298604, z: -0.27675572, w: 0.45961973}
+    m_Value: {x: 0.2139925, y: 0.7853249, z: -0.3919391, w: 0.4288261}
   m_Size:
-    m_Target: 2.535903
+    m_Target: 0.018675817
     speed: 2
-    m_Value: 2.535903
+    m_Value: 0.018675817
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -28710,7 +29025,7 @@ MonoBehaviour:
   m_LastSceneViewRotation: {x: 0.2677027, y: 0.17991765, z: -0.050957978, w: 0.9451823}
   m_LastSceneViewOrtho: 1
   m_Viewpoint:
-    m_SceneView: {fileID: 17}
+    m_SceneView: {fileID: 19}
     m_CameraOverscanSettings:
       m_Opacity: 50
       m_Scale: 1
@@ -28723,7 +29038,7 @@ MonoBehaviour:
     name: Contributors / Receivers
     section: Lighting
   m_ViewIsLockedToObject: 0
---- !u!114 &18
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28745,9 +29060,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1920
-    y: 639
-    width: 1468
-    height: 347
+    y: 694
+    width: 1461
+    height: 292
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

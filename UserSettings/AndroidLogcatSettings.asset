@@ -11,18 +11,6 @@
         {
             "deviceId": "1WMHHA675C2384",
             "name": "com.aaleta.AstroPutt",
-            "processId": 19498,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA675C2384",
-            "name": "com.aaleta.AstroPutt",
-            "processId": 22738,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA675C2384",
-            "name": "com.aaleta.AstroPutt",
             "processId": 23821,
             "exited": true
         },
@@ -36,6 +24,18 @@
             "deviceId": "1WMHHA675C2384",
             "name": "com.oculus.os.clearactivity",
             "processId": 8044,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.oculus.systemux:SystemUX",
+            "processId": 4611,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.oculus.igvr:IgvrHomeWorldCanvasActivity",
+            "processId": 6484,
             "exited": false
         }
     ],

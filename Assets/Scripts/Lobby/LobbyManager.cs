@@ -8,7 +8,7 @@ public class LobbyManager : MonoBehaviour
     [Header("UI References")]
     public Button tutorialButton;
     public Button level1Button;
-    public Text level1Text;
+    public Image level1Image;
 
     [Header("Scene Names")]
     public string tutorialScene = "Tutorial";
@@ -22,13 +22,14 @@ public class LobbyManager : MonoBehaviour
         if (isTutorialDone)
         {
             level1Button.interactable = true;
-            level1Text.text = "Play Course 1";
             level1Button.onClick.AddListener(() => LoadLevel(level1Scene));
         }
         else
         {
             level1Button.interactable = false;
-            level1Text.text = "Course 1 (Locked)";
+            Color c = level1Image.color;
+            c.a = 0.7f;
+            level1Image.color = c;
         }
     }
 

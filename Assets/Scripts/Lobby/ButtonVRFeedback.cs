@@ -3,9 +3,16 @@ using UnityEngine.EventSystems;
 
 public class ButtonVRFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [Header("Scale Feedback")]
     private Vector3 originalScale;
     public float hoverScale = 1.1f;
     public float speed = 10f;
+
+    [Header("Hint Configuration")]
+    public VRHintController hintController;
+    public string animationName = "Right_Controller_Press_Trigger";
+    public Vector3 hintOffset = new(0.0f, 0.0f, 0.6f);
+    public Vector3 rotationOffset = new(0, 110, 0);
 
     private Vector3 targetScale;
 
@@ -23,10 +30,20 @@ public class ButtonVRFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void OnPointerEnter(PointerEventData eventData)
     {
         targetScale = originalScale * hoverScale;
+
+        if (hintController != null)
+        {
+            hintController.ShowHint(VRHintController.Hand.Right, animationName, hintOffset, rotationOffset);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         targetScale = originalScale;
+
+        if (hintController != null)
+        {
+            hintController.HideHint();
+        }
     }
 }
