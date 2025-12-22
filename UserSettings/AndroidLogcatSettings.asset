@@ -10,18 +10,6 @@
     "m_KnownProcessesForSerialization": [
         {
             "deviceId": "1WMHHA675C2384",
-            "name": "com.aaleta.AstroPutt",
-            "processId": 23821,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA675C2384",
-            "name": "com.aaleta.AstroPutt",
-            "processId": 4581,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA675C2384",
             "name": "com.oculus.os.clearactivity",
             "processId": 8044,
             "exited": true
@@ -36,7 +24,19 @@
             "deviceId": "1WMHHA675C2384",
             "name": "com.oculus.igvr:IgvrHomeWorldCanvasActivity",
             "processId": 6484,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.oculus.systemux:SystemUX",
+            "processId": 4725,
             "exited": false
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.aaleta.AstroPutt",
+            "processId": 20799,
+            "exited": true
         }
     ],
     "m_Tags": {

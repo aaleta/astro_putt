@@ -8,6 +8,8 @@ using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 public class LobbyOnboarding : MonoBehaviour
 {
+    public static LobbyOnboarding Instance;
+
     [Header("UI Configuration")]
     public GameObject taskWindow;
     public GameObject levelSelectCanvas;
@@ -51,6 +53,11 @@ public class LobbyOnboarding : MonoBehaviour
     private float walkDistance = 0f;
     private bool teleported = false;
     private Vector3 initialWindowScale;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     IEnumerator Start()
     {
@@ -263,5 +270,10 @@ public class LobbyOnboarding : MonoBehaviour
         welcomeAssistant.Stop();
         welcomeAssistant.clip = clip;
         welcomeAssistant.Play();
+    }
+
+    public bool ShouldShowHint()
+    {
+        return currentStage == 1 || currentStage == 2;
     }
 }

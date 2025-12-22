@@ -63,9 +63,9 @@ public class TooltipController : MonoBehaviour
     private void PositionTooltip(Vector3 targetPosition)
     {
         Vector3 cameraPos = Camera.main.transform.position;
-        Vector3 direction = (targetPosition - cameraPos).normalized;
+        Vector3 direction = (targetPosition - cameraPos);
 
-        transform.position = targetPosition - (direction * 0.5f);
+        transform.position = targetPosition - (direction * 0.2f);
     }
 
     private void FaceCamera()

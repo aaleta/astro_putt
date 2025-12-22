@@ -31,6 +31,12 @@ public class ButtonVRFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         targetScale = originalScale * hoverScale;
 
+        // Prevent showing hints during onboarding
+        if (LobbyOnboarding.Instance != null && LobbyOnboarding.Instance.ShouldShowHint())
+        {
+            return;
+        }
+
         if (hintController != null)
         {
             hintController.ShowHint(VRHintController.Hand.Right, animationName, hintOffset, rotationOffset);
@@ -40,6 +46,12 @@ public class ButtonVRFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void OnPointerExit(PointerEventData eventData)
     {
         targetScale = originalScale;
+
+        // Prevent showing hints during onboarding
+        if (LobbyOnboarding.Instance != null && LobbyOnboarding.Instance.ShouldShowHint())
+        {
+            return;
+        }
 
         if (hintController != null)
         {

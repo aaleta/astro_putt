@@ -12,13 +12,14 @@ public class LobbyManager : MonoBehaviour
 
     [Header("Scene Names")]
     public string tutorialScene = "Tutorial";
-    public string level1Scene = "Level1";
+    public string level1Scene = "Course 1";
 
     void Start()
     {
         bool isTutorialDone = PlayerPrefs.GetInt("TutorialComplete", 0) == 1;
         tutorialButton.onClick.AddListener(() => LoadLevel(tutorialScene));
 
+        isTutorialDone = true; // For testing purposes, assume tutorial is done
         if (isTutorialDone)
         {
             level1Button.interactable = true;
@@ -35,6 +36,7 @@ public class LobbyManager : MonoBehaviour
 
     void LoadLevel(string sceneName)
     {
+        Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 }

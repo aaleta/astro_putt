@@ -514,7 +514,7 @@ MonoBehaviour:
   level1Button: {fileID: 802112403}
   level1Image: {fileID: 2131091655}
   tutorialScene: Tutorial
-  level1Scene: Level1
+  level1Scene: Course 1
 --- !u!82 &210809777
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3999,10 +3999,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonVRFeedback
   hoverScale: 1.1
   speed: 10
-  hintController: {fileID: 0}
+  hintController: {fileID: 1641998100}
   animationName: Right_Controller_Press_Trigger
-  hintOffset: {x: 0.5, y: -0.2, z: 0.6}
-  rotationOffset: {x: -45, y: 180, z: 0}
+  hintOffset: {x: 0, y: 0, z: 0.6}
+  rotationOffset: {x: 0, y: 110, z: 0}
 --- !u!1001 &7008524516107747550
 PrefabInstance:
   m_ObjectHideFlags: 0

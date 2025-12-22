@@ -10,10 +10,11 @@ public class AsteroidGaze : MonoBehaviour
 
     [Header("References")]
     public TooltipController tooltipController;
+    public Transform tooltipSpawnPoint;
 
     [Header("Raycast Settings")]
     public float gazeDistance = 10f;
-    //public LayerMask gazeLayerMask;
+    public LayerMask gazeLayerMask;
 
     [Header("Tooltip Settings")]
     [Tooltip("How big the tooltip looks relative to distance.")]
@@ -45,7 +46,7 @@ public class AsteroidGaze : MonoBehaviour
     {
         Ray ray = new(cameraTransform.position, cameraTransform.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, gazeDistance))//, gazeLayerMask))
+        if (Physics.Raycast(ray, out RaycastHit hit, gazeDistance, gazeLayerMask))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.green);
             Debug.Log($"Raycast hit: {hit.transform.name}");
@@ -62,9 +63,14 @@ public class AsteroidGaze : MonoBehaviour
 
     private void OnGazeEnter(Vector3 hitPoint)
     {
+        Debug.Log($"Gazing at {celestialName}");
         if (!isHovered)
         {
             isHovered = true;
+            if (tooltipSpawnPoint != null)
+            {
+                hitPoint = tooltipSpawnPoint.position;
+            }
             tooltipController.ShowTooltip(celestialName, gravity, hitPoint, sizeFactor, minScale, maxScale);
         }        
     }
