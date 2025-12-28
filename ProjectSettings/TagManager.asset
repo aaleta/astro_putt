@@ -7,6 +7,7 @@ TagManager:
   - RightHand
   - LeftHand
   - Ball
+  - Club
   layers:
   - Default
   - TransparentFX
