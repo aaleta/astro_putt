@@ -33,7 +33,7 @@ public class InteractableGaze : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, gazeDistance))//, gazeLayerMask))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.green);
-            Debug.Log($"Raycast hit: {hit.transform.name}");
+            //Debug.Log($"Raycast hit: {hit.transform.name}");
 
             if (hit.transform == this.transform)
             {

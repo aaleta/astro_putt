@@ -31,8 +31,10 @@ public class ButtonVRFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         targetScale = originalScale * hoverScale;
 
+        LobbyOnboarding onboarding = Object.FindFirstObjectByType<LobbyOnboarding>();
+
         // Prevent showing hints during onboarding
-        if (LobbyOnboarding.Instance != null && LobbyOnboarding.Instance.ShouldShowHint())
+        if (onboarding != null && onboarding.ShouldShowHint())
         {
             return;
         }
@@ -47,8 +49,10 @@ public class ButtonVRFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         targetScale = originalScale;
 
+        LobbyOnboarding onboarding = Object.FindFirstObjectByType<LobbyOnboarding>();
+
         // Prevent showing hints during onboarding
-        if (LobbyOnboarding.Instance != null && LobbyOnboarding.Instance.ShouldShowHint())
+        if (onboarding != null && onboarding.ShouldShowHint())
         {
             return;
         }

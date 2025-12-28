@@ -42,7 +42,6 @@ public class AmbienceManager : MonoBehaviour
         audioSource.volume = volume;
     }
 
-    // Functions for the UI "Next" button
     public void PlayNextSong()
     {
         currentSongIndex = (currentSongIndex + 1) % songs.Length;

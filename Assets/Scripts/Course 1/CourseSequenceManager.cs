@@ -46,7 +46,14 @@ public class CourseSequenceManager : MonoBehaviour
         if (currentIndex < stages.Count)
         {
             if (stages[currentIndex].holeVisuals != null)
+            {
                 stages[currentIndex].holeVisuals.SetActive(false);
+            }
+        }
+
+        if (TaskPanels.Instance != null)
+        {
+            TaskPanels.Instance.CompleteTask(currentIndex);
         }
 
         currentIndex++;

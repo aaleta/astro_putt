@@ -49,7 +49,7 @@ public class AsteroidGaze : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, gazeDistance, gazeLayerMask))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.green);
-            Debug.Log($"Raycast hit: {hit.transform.name}");
+            //Debug.Log($"Raycast hit: {hit.transform.name}");
 
             if (hit.transform == this.transform)
             {
@@ -63,7 +63,7 @@ public class AsteroidGaze : MonoBehaviour
 
     private void OnGazeEnter(Vector3 hitPoint)
     {
-        Debug.Log($"Gazing at {celestialName}");
+        //Debug.Log($"Gazing at {celestialName}");
         if (!isHovered)
         {
             isHovered = true;

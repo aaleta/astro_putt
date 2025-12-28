@@ -7,7 +7,7 @@ public class SimpleClubSpawner : MonoBehaviour
 {
     public GameObject realClubPrefab;
     private XRInteractionManager interactionManager;
-    private XRGrabInteractable myInteractable; // Reference to self
+    private XRGrabInteractable myInteractable;
 
     void Awake()
     {
@@ -25,6 +25,7 @@ public class SimpleClubSpawner : MonoBehaviour
 
         var handInteractor = args.interactorObject;
         GameObject newClub = Instantiate(realClubPrefab, handInteractor.transform.position, handInteractor.transform.rotation);
+        newClub.tag = "Club";
 
         var newClubInteractable = newClub.GetComponent<IXRSelectInteractable>();
 

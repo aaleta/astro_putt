@@ -10,8 +10,7 @@ public class BallSpawner : MonoBehaviour
     {
         if (currentBall != null)
         {
-            currentBall.transform.position = spawnPoint.position;
-            currentBall.transform.rotation = Quaternion.identity;
+            currentBall.transform.SetPositionAndRotation(spawnPoint.position, spawnPoint.rotation);
 
             Rigidbody rb = currentBall.GetComponent<Rigidbody>();
             if (rb != null)

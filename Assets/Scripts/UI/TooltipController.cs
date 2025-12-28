@@ -72,7 +72,20 @@ public class TooltipController : MonoBehaviour
     {
         if (Camera.main == null) return;
 
-        transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+        //transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+        // 1. Get the direction the camera is facing
+        Vector3 lookDirection = Camera.main.transform.forward;
+
+        // 2. Flatten the vector (remove vertical inclination) so it doesn't tilt up/down
+        lookDirection.y = 0;
+
+        // 3. Normalize to ensure consistent rotation behavior
+        // Check if magnitude is sufficient to avoid errors when looking straight down/up
+        if (lookDirection.sqrMagnitude > 0.001f)
+        {
+            // 4. Create a rotation that looks in that direction, but keeps the "Up" vertical
+            transform.rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+        }
     }
 
     private string GetColorForGravity(GravityLevel level)

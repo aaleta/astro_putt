@@ -71,6 +71,7 @@ public class HoleAttractor : MonoBehaviour
         ball.SetActive(false);
         Destroy(ball, 1f);
 
+        GameManager.Instance.AddHole();
         onBallCaptured.Invoke();
 
         this.enabled = false;

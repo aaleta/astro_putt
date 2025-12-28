@@ -8,8 +8,6 @@ using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 public class LobbyOnboarding : MonoBehaviour
 {
-    public static LobbyOnboarding Instance;
-
     [Header("UI Configuration")]
     public GameObject taskWindow;
     public GameObject levelSelectCanvas;
@@ -54,46 +52,79 @@ public class LobbyOnboarding : MonoBehaviour
     private bool teleported = false;
     private Vector3 initialWindowScale;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
-
     IEnumerator Start()
     {
-        foreach (var img in taskCheckboxes)
+        // 1. ROBUST CAMERA FINDER
+        if (playerHeadset == null)
         {
-            Color c = img.color;
-            c.a = 0;
-            img.color = c;
+            // Try the standard way (requires "MainCamera" tag)
+            if (Camera.main != null)
+            {
+                playerHeadset = Camera.main.transform;
+            }
+            // Fallback: Find ANY camera (if you forgot the tag)
+            else
+            {
+                var cam = FindFirstObjectByType<Camera>();
+                if (cam != null) playerHeadset = cam.transform;
+            }
         }
 
-        //levelSelectCanvas.SetActive(false);
-
-        initialWindowScale = taskWindow.transform.localScale;
-        taskWindow.transform.localScale = Vector3.zero;
-        taskWindow.SetActive(true);
-        
-        lastHeadPos = playerHeadset.position;
-
-        if (teleportationProvider != null)
+        // 2. SAFETY CHECK
+        // If we still didn't find it, log an error and stop to prevent the crash later
+        if (playerHeadset == null)
         {
-            teleportationProvider.locomotionEnded += OnTeleportComplete;
+            Debug.LogError("CRITICAL: LobbyOnboarding cannot find the VR Camera! Is it tagged 'MainCamera'?");
+            yield break;
         }
 
-        // Wait one second before starting
-        yield return new WaitForSeconds(1.0f);
 
-        welcomeAssistant.clip = introduction;
-        welcomeAssistant.Play();
 
-        // Wait 0.5 to unfold the task window
-        yield return new WaitForSeconds(5.5f);
-        StartCoroutine(UnfoldWindow());
 
-        yield return new WaitForSeconds(introduction.length -5f);
 
-        StartStage(0);
+
+        if (GameManager.Instance.HasCompletedTutorial())
+        {
+            levelSelectCanvas.SetActive(true);
+            taskWindow.SetActive(false);
+            yield break;
+        }
+        else
+        {
+            foreach (var img in taskCheckboxes)
+            {
+                Color c = img.color;
+                c.a = 0;
+                img.color = c;
+            }
+
+            //levelSelectCanvas.SetActive(false);
+
+            initialWindowScale = taskWindow.transform.localScale;
+            taskWindow.transform.localScale = Vector3.zero;
+            taskWindow.SetActive(true);
+
+            lastHeadPos = playerHeadset.position;
+
+            if (teleportationProvider != null)
+            {
+                teleportationProvider.locomotionEnded += OnTeleportComplete;
+            }
+
+            // Wait one second before starting
+            yield return new WaitForSeconds(1.0f);
+
+            welcomeAssistant.clip = introduction;
+            welcomeAssistant.Play();
+
+            // Wait 0.5 to unfold the task window
+            yield return new WaitForSeconds(5.5f);
+            StartCoroutine(UnfoldWindow());
+
+            yield return new WaitForSeconds(introduction.length - 5f);
+
+            StartStage(0);
+        }
     }
 
     private void OnDestroy()
@@ -114,6 +145,8 @@ public class LobbyOnboarding : MonoBehaviour
 
     private void Update()
     {
+        if (playerHeadset == null) return;
+
         if (currentStage == 0) // Real Walk
         {
             float dist = Vector3.Distance(playerHeadset.position, lastHeadPos);
@@ -158,7 +191,9 @@ public class LobbyOnboarding : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (taskWindow.activeSelf && currentStage != -2)
+        if (playerHeadset == null) return;
+
+        if (taskWindow != null && taskWindow.activeSelf && currentStage != -2)
         {
             //Debug.Log("The player headset position is: " + playerHeadset.position);
             Vector3 targetPosition = playerHeadset.TransformPoint(targetOffset);
@@ -263,6 +298,8 @@ public class LobbyOnboarding : MonoBehaviour
         StartCoroutine(FadeInImage(taskCheckboxes[^1]));
 
         levelSelectCanvas.SetActive(true);
+
+        GameManager.Instance.CompleteTutorial();
     }
 
     void PlayClip(AudioClip clip)

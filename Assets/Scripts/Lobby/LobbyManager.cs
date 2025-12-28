@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class LobbyManager : MonoBehaviour
 {
@@ -16,14 +15,17 @@ public class LobbyManager : MonoBehaviour
 
     void Start()
     {
-        bool isTutorialDone = PlayerPrefs.GetInt("TutorialComplete", 0) == 1;
-        tutorialButton.onClick.AddListener(() => LoadLevel(tutorialScene));
+        Debug.Log("LobbyManager Start");
 
-        isTutorialDone = true; // For testing purposes, assume tutorial is done
+
+        bool isTutorialDone = GameManager.Instance.HasCompletedTutorial();
+        tutorialButton.onClick.AddListener(() => SceneTransition.Instance.GoToScene(tutorialScene));
+
+        //isTutorialDone = true;
         if (isTutorialDone)
         {
             level1Button.interactable = true;
-            level1Button.onClick.AddListener(() => LoadLevel(level1Scene));
+            level1Button.onClick.AddListener(() => SceneTransition.Instance.GoToScene(level1Scene));
         }
         else
         {
@@ -34,9 +36,9 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
-    void LoadLevel(string sceneName)
+    public void RegisterLobbyButtons(Button playBtn, Button tutorialBtn)
     {
-        Debug.Log("Loading scene: " + sceneName);
-        SceneManager.LoadScene(sceneName);
+        tutorialButton = playBtn;
+        level1Button = tutorialBtn;
     }
 }

@@ -1,6 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.LowLevel;
+using UnityEngine.UI;
 
 public class TeleportManager : MonoBehaviour
 {
@@ -25,10 +26,12 @@ public class TeleportManager : MonoBehaviour
 
     private IEnumerator TeleportRoutine()
     {
+        Vector3 currentFeetPosition = new(mainCamera.position.x, playerRoot.position.y, mainCamera.position.z);
+
         // 1. Activate the teleport effect
         if (teleportEffect != null)
         {
-            teleportEffect.transform.position = playerRoot.position;
+            teleportEffect.transform.position = currentFeetPosition;
             teleportEffect.transform.SetParent(playerRoot);
 
             teleportEffect.gameObject.SetActive(true);
@@ -48,8 +51,12 @@ public class TeleportManager : MonoBehaviour
             teleportEffect.Stop();
         }
 
-        playerRoot.position = teleportTarget.position;
-        playerRoot.rotation = teleportTarget.rotation;
+        // The XR Origin doesn't move, the camera does, so we need to get the difference and apply it to the player root
+        float rotationDiff = teleportTarget.eulerAngles.y - mainCamera.eulerAngles.y;
+        playerRoot.Rotate(0, rotationDiff, 0);
+
+        currentFeetPosition = new(mainCamera.position.x, playerRoot.position.y, mainCamera.position.z);        
+        playerRoot.position += teleportTarget.position - currentFeetPosition;
 
         // 5. Fade in from black
         yield return StartCoroutine(Fade(1f, 0f));

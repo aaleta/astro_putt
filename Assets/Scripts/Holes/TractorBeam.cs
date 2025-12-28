@@ -6,6 +6,9 @@ public class TractorBeam : MonoBehaviour
     public RocketController rocket;
     public Transform capturePoint;
 
+    [Header("Game Logic")]
+    public int holeIndex = 0;
+
     [Header("Forces")]
     public float pullForce = 0.1f;
     public float liftForce = 0.1f;
@@ -68,6 +71,12 @@ public class TractorBeam : MonoBehaviour
     {
         ball.SetActive(false);
         Destroy(ball, 1f);
+
+        if (TaskPanel.Instance != null)
+        {
+            GameManager.Instance.AddHole();
+            TaskPanel.Instance.CompleteTask(holeIndex);
+        }
 
         rocket.IgniteAndLaunch();
 
