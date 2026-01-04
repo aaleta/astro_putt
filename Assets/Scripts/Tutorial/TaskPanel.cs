@@ -14,6 +14,7 @@ public class TaskPanel : MonoBehaviour
     public GameObject endGameMenu;
     
     private int completedCount = 0;
+    private bool[] holeCompleted = new bool[3] { false, false, false };
     private readonly string holeName = "Tutorial";
 
     private void Awake()
@@ -38,8 +39,9 @@ public class TaskPanel : MonoBehaviour
 
     public void CompleteTask(int taskIndex)
     {
-        if (taskIndex >= 0 && taskIndex < taskCheckboxes.Length)
+        if (taskIndex >= 0 && taskIndex < taskCheckboxes.Length && !holeCompleted[taskIndex])
         {
+            holeCompleted[taskIndex] = true;
             completedCount++;
             StartCoroutine(FadeInImage(taskCheckboxes[taskIndex]));
         }

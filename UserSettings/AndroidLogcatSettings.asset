@@ -11,12 +11,6 @@
         {
             "deviceId": "1WMHHA675C2384",
             "name": "com.aaleta.AstroPutt",
-            "processId": 22608,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHHA675C2384",
-            "name": "com.aaleta.AstroPutt",
             "processId": 23204,
             "exited": true
         },
@@ -31,6 +25,18 @@
             "name": "com.aaleta.AstroPutt",
             "processId": 9721,
             "exited": true
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.oculus.os.clearactivity",
+            "processId": 3824,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHHA675C2384",
+            "name": "com.oculus.vrshell",
+            "processId": 3236,
+            "exited": false
         }
     ],
     "m_Tags": {

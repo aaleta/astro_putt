@@ -14,6 +14,8 @@ public class TractorBeam : MonoBehaviour
     public float liftForce = 0.1f;
     public float absorptionDistance = 0.2f;
 
+    private bool isCompleted = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
@@ -72,8 +74,9 @@ public class TractorBeam : MonoBehaviour
         ball.SetActive(false);
         Destroy(ball, 1f);
 
-        if (TaskPanel.Instance != null)
+        if (TaskPanel.Instance != null && !isCompleted)
         {
+            isCompleted = true;
             GameManager.Instance.AddHole();
             TaskPanel.Instance.CompleteTask(holeIndex);
         }
